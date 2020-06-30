@@ -1,0 +1,27 @@
+﻿#header, #nav , #section, #footer {
+	width: 100%;
+	background-color:#C0C0C0;
+
+}
+
+#section {
+	background-color: gray;
+}
+
+#header{
+	border: black 2px solid;
+	background-color: #00FF00;
+	text-align: center;
+}
+
+#nav{
+	background-color:#FF0000;
+}
+
+#nav li{
+	display: inline;
+}
+
+.imagen{
+	float: right;
+}

@@ -1,0 +1,8 @@
+﻿<p>Por favor deja tus datos</p>
+<form>
+Nombre: <input type="text" name="txtnombre" class="campo"><br/>
+Correo: <input type="text" name="txtcorreo" class="campo"><br/>
+Edad: <input type="text" name="txtedad" class="campo"><br/>
+Fecha: <input type="text" name="txtfecha" class="campo"><br/>
+<input type="submit" value="ENVIAR">
+</form>

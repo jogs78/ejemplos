@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeImage()
+{
+imagen=document.getElementById('myimage')
+if (imagen.src.match("bulbon"))
+  {
+  imagen.src="pic_bulboff.gif";
+  }
+else
+  {
+  imagen.src="pic_bulbon.gif";
+  }
+}
+</script>
+
+
+<img id="myimage" onclick="changeImage()"
+src="pic_bulboff.gif" width="100" height="180">
+
+<p>Click en el foco para enceder o apagar</p>
+
+</body>
+</html>
+
+

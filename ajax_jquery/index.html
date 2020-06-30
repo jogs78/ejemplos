@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>titulo</title>
+	<link href="style.css" rel="stylesheet" />
+	<script src="scripts/jquery-3.3.1.min.js">
+	</script>
+	<script type="text/javascript">
+		function manejador( cual ){
+			$.ajax({
+				url: "http://ejemplos2.local/" + cual+".txt"
+			}).done(function(data){
+				procesar(data);
+			});
+		}
+		function procesar(data){
+			try{
+				$("#section").html(data);		
+			}catch(e){
+				alert ("ERROR:" + e.message );
+			}
+		}
+	</script>
+<head>
+<body>
+<div id="header">
+ENCABEZADO
+</div>
+<div id="nav">
+       <ul>
+            <li id="inicio">INICIO</li>
+            <li id="contacto">CONTACTO</li>
+            <li id="historia">HISTORIA</li>
+            <li id="acerca">ACERCA</li>
+            <li id="otro" > OTRO</li>
+        </ul>
+</div>
+<div id="section">
+para mostrar
+</div>
+<div id="footer" style="background-color:orange">copy®
+</div>
+</body>
+<script>
+	$( document ).ready(function() {
+		$("#inicio").click(function(){manejador('inicio')});
+		$("#contacto").click(function(){manejador('contacto')});
+		$("#historia").click(function(){manejador('historia')});
+		$("#acerca").click(function(){manejador('acerca')});
+		$("#otro").click(function(){manejador('otro')});
+	});
+</script>
+</html>

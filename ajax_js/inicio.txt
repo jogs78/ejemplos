@@ -1,0 +1,8 @@
+
+                <h1>JORGE</h1>
+				<p align="justify">HAGO DE SU CONOCIMIENTO QUE  EN SU TARJETA DE ASISTENCIA CORRESPONDIENTE AL MES DE    ENERO   DEL AÑO EN CURSO,  NO HA INCURRIDO EN NINGUN RETARDO NI FALTA  DE ASISTENCIA,  POR
+          LO QUE DE CONFORMIDAD  CON LO DISPUESTO  EN EL  ARTÍCULO 81, ....</p>  
+        <ul>
+            <li>UN PUNTO</li>
+            <li>OTRO PUNTO</li>
+        </ul>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>titulo</title>
+	<link href="style.css" rel="stylesheet" />
+	<script type="text/javascript">
+		var peticion ;
+		function obtenerXHR(){
+			req = false;
+			if (window.XMLHttpRequest){
+				req = new XMLHttpRequest();
+			}else{
+				if (ActiveXObjetct){
+					var Versiones = array("MXXML2.XMLHttp.5.0",
+							"MSXML2.XMLHttp.4.0","MSXML2.XMLHttp.3.0",
+							"MXXML2.XMLHttp" , "Microsoft.XMLHttp");
+							
+					for (var i=0; i<Versiones.length; i++){
+						try{
+							req = new ActiveXObject(Versiones[i]);
+							return req;
+						}catch (e){}
+					}
+				}
+			}
+			return req;
+		}
+		function manejador( cual ){
+			peticion = obtenerXHR();
+			try{
+				peticion.open("GET", "http://ejemplos2.local/" + cual+".txt", true);
+				peticion.onreadystatechange = procesar;
+				peticion.send(null);
+			}catch(e){
+				alert ("ERROR:" + e.message );
+			}
+		}
+		function procesar(){
+			try{
+				seccion  = document.getElementById("section"); 
+				seccion.innerHTML = peticion.responseText;		
+			}catch(e){
+				alert ("ERROR:" + e.message );
+			}
+		}
+	</script>
+<head>
+<body>
+<div id="header">
+ENCABEZADO
+</div>
+<div id="nav">
+       <ul>
+            <li onClick="manejador('inicio')">INICIO</li>
+            <li onClick="manejador('contacto')">CONTACTO</li>
+            <li onClick="manejador('historia')">HISTORIA</li>
+            <li onClick="manejador('acerca')">ACERCA</li>
+            <li > OTRO</li>
+        </ul>
+</div>
+<div id="section">
+para mostrar
+</div>
+<div id="footer" style="background-color:orange">copy®
+</div>
+</body>
+</html>
